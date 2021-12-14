@@ -1,0 +1,47 @@
+*{
+    font-family: verdana;
+    margin: 0;
+}
+
+body {
+    background-color: #eee;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.flex-container {
+    /* rodzic */
+    display: flex;
+    background-color: pink;
+    /* FLEX_WRAP W RODZICU */
+    flex-wrap: wrap; /* zeby dzieci mogly na dol schodzic bez media queries */
+    /* flex-wrap: wrap-reverse; ostatni elemnt idzie na górę */
+    /* flex-wrap: nowrap; domyslne zachowanie - pasek w poziomie */
+} 
+
+
+.box {
+    height: 100px;
+    min-width: 200px; /*przez to sie robi pasek na poziomie dlatego flex-wrap przenosi elemnt na dol*/
+    flex-grow: 1; /*rownomierne rosniecie elementow*/
+
+}
+
+/* konkretne dziecko */
+.one {
+    background-color: red;
+
+}
+
+.two {
+    background-color: blue;
+    flex-shrink: 2;
+}
+
+.three {
+    background-color: green;
+}
