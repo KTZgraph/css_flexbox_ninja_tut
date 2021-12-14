@@ -30,18 +30,23 @@ body {
 .box {
     height: 100px;
     min-width: 100px;
-    float: left;
+    /* float: left; */
+    /* flex-grow: 1; rosną dzieci równo */
+
 }
 
 /* konkretne dziecko */
 .one {
     background-color: red;
+    flex-grow: 1; /*to dziecko zajmuje 1/6 calego wolne miejsce*/
 }
 
 .two {
     background-color: blue;
+    flex-grow: 2;
 }
 
 .three {
     background-color: green;
+    flex-grow: 3;
 }
