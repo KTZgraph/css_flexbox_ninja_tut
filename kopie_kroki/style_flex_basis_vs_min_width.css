@@ -28,25 +28,30 @@ body {
 
 .box {
     height: 100px;
-    /* skrótowy zapis wszystkich opcji flexboxa */
-    /* flex-wrap, flex-shrink, flex-basis */
-    flex: 1 0 200px; /*REKOMENDOWANY SPOSOB*/
-    
-    /* flex: 1; robi flex-wrap 1, flex-shrink 1, flex-basis 0 domyslnie włąsnie jest zero w basis */
-    /* flex: 1;  */
+    /*wrap to the next line tak samo jak min-width*/
+    /* flex-basis: 200px;  */
 }
 
 /* konkretne dziecko */
 .one {
     background-color: red;
+    /* flex-basis: 100px; */
+    min-width: 500px; /*pojawia sie pasek poziomo*/
+    flex-basis: 500px; /*zmneijsza sie tak responsywnie*/
 }
 
 .two {
     background-color: blue;
+    /* flex-basis: 200px; */
+    min-width: 500px; /*pojawia sie pasek poziomo*/
+    flex-basis: 500px; /*zmneijsza sie tak responsywnie*/
 
 }
 
 .three {
     background-color: green;
+    /* flex-basis: 300px; */
+    min-width: 500px; /*pojawia sie pasek poziomo*/
+    flex-basis: 500px; /*zmneijsza sie tak responsywnie*/
 
 }

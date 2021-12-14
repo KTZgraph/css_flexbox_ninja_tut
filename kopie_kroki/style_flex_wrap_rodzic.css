@@ -17,7 +17,6 @@ body {
     /* rodzic */
     display: flex;
     background-color: pink;
-    /* FLEX_WRAP W RODZICU */
     flex-wrap: wrap; /* zeby dzieci mogly na dol schodzic bez media queries */
     /* flex-wrap: wrap-reverse; ostatni elemnt idzie na górę */
     /* flex-wrap: nowrap; domyslne zachowanie - pasek w poziomie */
