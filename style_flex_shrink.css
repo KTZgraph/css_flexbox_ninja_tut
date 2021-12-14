@@ -1,0 +1,59 @@
+*{
+    font-family: verdana;
+    margin: 0;
+}
+
+body {
+    background-color: #eee;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.flex-container {
+    /* rodzic */
+    display: flex;
+    background-color: pink;
+} 
+
+/* patent bez flexa jak po staremu robiłam */
+/* .flex-container:after {
+    content: "";
+    display: block;
+    clear: both;
+} */
+
+/* dzieci */
+.box {
+    height: 100px;
+    width: 320px; /*1/3 wrappera*/
+    /* min-width: 100px; */
+    /* float: left; */
+    /* flex-grow: 1; rosną dzieci równo */
+
+}
+
+/* konkretne dziecko */
+.one {
+    background-color: red;
+    /* flex-grow: 1; to dziecko zajmuje 1/6 calego wolne miejsce */
+    flex-shrink: 1;
+}
+
+.two {
+    background-color: blue;
+    /* flex-grow: 2; */
+    flex-shrink: 2;
+}
+
+.three {
+    background-color: green;
+    /* flex-grow: 3; */
+
+    /* flex-shrink odwrotnosc flex-grow tez ulamkowo zmniejsza gdy zmniejsza sie okno przegladarki */
+    /* flex-shrink rzadko uzyane */
+    flex-shrink: 10; /*najbardziej sie zmniejsza gdy wolnego miejsca brakuje*/
+}
