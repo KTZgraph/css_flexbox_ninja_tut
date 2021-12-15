@@ -17,19 +17,15 @@ body {
     display: flex;
     background: #fff;
     flex-wrap: wrap;
-    /* w kolumnie - elemnty poziomo */
-    /* flex-flow: column;  */
-    flex-flow: row; 
+    flex-flow: column; /*wyznacza os*/
     height: 600px;
-    /* centrowanie w kontenerze elemntów */
-    justify-content: center;
-    align-items: center; /*działa na cross-axis*/
-
+    justify-content: flex-end; /*w gowenj osi*/
+    align-items: center; /*w podrzednej osi centruje*/
 
 }
 
 .box {
-    height: 100px;
+    width: 100px;
     flex: 0 0 100px; /*flex-flow: column;  tylko kontroluje teraz wysokosc*/
 
 }
