@@ -19,12 +19,9 @@ body {
     flex-wrap: wrap;
     /* w kolumnie - elemnty poziomo */
     /* flex-flow: column;  */
-    flex-flow: row; 
-    height: 600px;
-    /* centrowanie w kontenerze elemntów */
-    justify-content: center;
-    align-items: center; /*działa na cross-axis*/
-
+    flex-flow: column-reverse; /*odrwaca kolejnosc elementow*/
+    justify-content: flex-start ; /*centruje wzgledem glownej osi*/ 
+    height: 800px;
 
 }
 
