@@ -1,0 +1,75 @@
+/* pionowe menu do mobilek */
+/* ul to flex container */
+/* li to flex items */
+
+
+*{
+    font-family: verdana;
+    margin: 0;
+}
+
+body {
+    background-color: lightgray;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* menu base styles */
+nav {
+    background-color: #333;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    /* text-align: center; */
+    color: #fff;
+    display: block;
+    padding: 10px;
+    /* background-color: #555; */
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+
+/* flex styles */
+@media screen and (min-width: 768px){
+    nav ul { 
+        /* flex container */
+        display: flex;
+        /*wszystko na środku*/
+        /* justify-content: center; */ 
+
+        /*wszystkie do prawej*/
+        /*justify-content: flex-end;*/ 
+
+        /*wszystkie do lewej domyslne*/
+        /*justify-content: flex-start;*/ 
+
+        /*wolna przestrzen na przewy mieszy elementami i na brzegach*/
+        /*justify-content: space-around;*/ 
+        
+        /*wolna przestrzen TYLKO MIEDZY ELEMENTAMI*/
+        /*justify-content: space-between;*/ 
+
+        justify-content: flex-start; /*domyslne*/
+
+    }
+
+    nav li {
+        /* flex elemnts */
+        /* rosną równomiernie na calosc flex-wrap:1, flex-shrink:1 flex-basis: 0 domyslne */
+        flex: 1 1 0; 
+
+    }
+}
