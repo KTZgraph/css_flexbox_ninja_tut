@@ -1,0 +1,142 @@
+/* nav to flex-container zeby byly kontakty menu po prawej */
+/*zagnieżdzanie kontenera w kontenerze*/
+/* nav ul.social {
+    flex-container
+    flex: 1 1 0;
+    display: flex; dla mobilnych
+} */
+
+
+*{
+    font-family: verdana;
+    margin: 0;
+}
+
+body {
+    background-color: lightgray;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/* menu base styles */ 
+nav {
+    background-color: #333;
+
+    /* jak beda ponizsze opcje to w mobilnych konakty NIE ZEJDA NA DOL */
+    /* display: flex; */
+    /* to własnie robi menu po prawej i lewej elemntow ul */
+    /* justify-content: space-between;  */
+} 
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    display: block;
+    padding: 10px;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+
+a.tw {
+    background: url(img/tw.png) no-repeat center;
+    background-size: 80%;
+}
+
+a.fb {
+    background: url(img/fb.png) no-repeat center;
+    background-size: 80%;
+}
+
+.social a {
+    /* oba tagi a */
+    text-indent: -10000px;
+}
+
+.social {
+    max-width: 80px;
+    margin: 0 auto; /*dla mobilnych*/
+}
+
+
+nav ul.social {
+    /* flex-container */
+    flex: 1 1 0;
+    /* teraz jeszcze flex item */
+    display: flex; /*dla mobilnych*/
+}
+
+nav ul.social li {
+    flex: 1 1 0; /*dla mobilnych*/
+}
+
+/* GRID VS FLEX BASE STYLES */
+
+#blocks{
+    margin:20px;
+}
+
+article {
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+article h2 {
+    text-align: center;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+/* flex styles */
+@media screen and (min-width: 768px){
+    nav ul { 
+        /* flex container */
+        display: flex;
+    }
+
+    nav li {
+        flex: 1 1 0; 
+    }
+
+    nav { /*[!]*/
+        display: flex; /*bez tego kontakty schodza na dol do lewej*/
+        /*to własnie robi menu po prawej i lewej elemntow ul*/
+        justify-content: space-between;  /*zby konktay zeszy do prawej*/
+    }
+
+    ul.social {
+        margin: 0; /*wyrowanie do prawej dla duzego okna*/
+    }
+
+    /**********************/
+    #blocks {
+        display: flex;
+        flex-wrap: wrap;
+        /* przertwy miecy artykulami */
+        justify-content: space-between;
+    }
+
+    article {
+        flex: 0 1 32%;
+        /* mała animacja zmieniania layoutu fajniusie <3 */
+        transition: flex-basis 0.2s linear;
+    }
+
+    article.stack {
+        flex: 0 1 100%;
+    }
+}
