@@ -1,0 +1,44 @@
+*{
+    font-family: verdana;
+    margin: 0;
+}
+
+body {
+    background-color: lightgray;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.flex-container {
+    display: flex;
+    background: #fff;
+    flex-wrap: wrap;
+    /* w kolumnie - elemnty poziomo */
+    /* flex-flow: column;  */
+    flex-flow: column-reverse; /*odrwaca kolejnosc elementow*/
+    justify-content: flex-start ; /*centruje wzgledem glownej osi*/ 
+    height: 800px;
+
+}
+
+.box {
+    height: 100px;
+    flex: 0 0 100px; /*flex-flow: column;  tylko kontroluje teraz wysokosc*/
+
+}
+
+.one {
+    background: red;
+}
+
+.two {
+    background: blue;
+}
+
+.three {
+    background: green;
+}
